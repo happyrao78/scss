@@ -1,34 +1,69 @@
-$bg-color:#f31212;
-$big-color:#5db639;
-$background:#313131;
-body{
+@import "mixin";
+@import "var";//importing the partials file
+
+
+body {
     background-color: $background;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main_header{
+
+.main_header {
+    @include flexprob;
     height: 100vh;
     width: 100vw;
-    display: grid;
-    place-items: center;
+
+    //nesting 
+    h1 {
+        color: $bg-color;
+        font-size: 5rem;
+        font-weight: bold;
+        @include sizing(1.5rem);
+
+        &:hover {
+            // refers to the parent child relationship and bar bar parent ko nhi likhna padega
+            color: $head_hover;
+            transition: ease-in-out 0.5s;
+        }
+
+        &::after {
+            content: ", Haryana";
+        }
+    }
+
+    p {
+        color: $bg-color;
+        font-size: 3.5rem;
+        @include sizing(0.5rem);
+
+        &:hover {
+            color: $phover;
+            transition: ease-in-out 0.5s;
+
+        }
+    }
 }
-.main_span{
-color: $big-color;
+
+.main_span {
+    color: $big-color;
 }
-//operators use kr skte  hai scss me 
-//variables use kr skte hai scss me
-//nesting use kr skte hai scss me
+
+//1. operators use kr skte  hai scss me 
+//2. variables use kr skte hai scss me
+//3. nesting use kr skte hai scss me
+//4. mixing 
+//5. we can also send parameters to the mixin
+//6. partials file for the scss file calling
+
 
 
 //sass-> css but, scss-> css3 {both are same}
-h1{
-    color: $bg-color;
-    font-size: 5rem + 5rem;
-}

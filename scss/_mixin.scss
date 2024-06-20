@@ -1,0 +1,11 @@
+@mixin flexprob{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+@mixin sizing($custom_size){
+    letter-spacing: $custom_size;
+    text-transform: uppercase
+}
