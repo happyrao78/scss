@@ -1,0 +1,34 @@
+$bg-color:#f31212;
+$big-color:#5db639;
+$background:#313131;
+body{
+    background-color: $background;
+}
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_header{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.main_span{
+color: $big-color;
+}
+//operators use kr skte  hai scss me 
+//variables use kr skte hai scss me
+//nesting use kr skte hai scss me
+
+
+//sass-> css but, scss-> css3 {both are same}
+h1{
+    color: $bg-color;
+    font-size: 5rem + 5rem;
+}
